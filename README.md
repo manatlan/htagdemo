@@ -5,7 +5,13 @@ It will be a lot simpler to intanciate it, on demand ;-)
 **IMPORTANT** : Currently, it's just an [empty app](app/app.py) !
 it will come soon ;-)
 
-# Test :
+# Test on your own 
+
+    docker build -t test https://github.com/manatlan/htagdemo.git && docker run -p 8111:8000 --rm test
+
+And surf to http://localhost:8111
+
+# Test (if you got the repo on local):
 
     ./test.sh
 
