@@ -1,0 +1,14 @@
+name: Docker Image CI for GHCR
+
+on: push
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: build and push the image
+        run: |
+          docker login --username manatlan --password ${{secrets.GITHUB_TOKEN}} ghcr.io
+          docker build . --tag ghcr.io/manatlan/htagdemo:latest
+          docker push ghcr.io/manatlan/htagdemo:latest
