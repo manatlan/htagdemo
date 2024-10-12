@@ -4,7 +4,10 @@ from htag import Tag
 class App(Tag.body):
     def init(self):
         self <= "hello world"
+        self <= Tag.button("say hi", _onclick=self.say)
 
+    def say(self,ev):
+        self <= Tag.div("hello")
 
 if __name__=="__main__":
     # just in case, you'll want to run it with the simple htag'Runner ....
