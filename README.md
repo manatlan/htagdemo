@@ -5,7 +5,7 @@ It will be a lot simpler to intanciate it, on demand ;-)
 **IMPORTANT** : Currently, it's just an [empty app](app/app.py) !
 it will come soon ;-)
 
-# Test on your own (from ghcr image)
+# Test on your own (from ghcr.io image)
 
     docker run -p 8111:8000 ghcr.io/manatlan/htagdemo:latest
 
