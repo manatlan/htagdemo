@@ -12,7 +12,8 @@ it will come soon ;-)
 # or manually :
 
 ## build and run once
-docker build -t htagdemo . && docker run -p 8000:8000 --rm htagdemo
+
+    docker build -t htagdemo . && docker run -p 8000:8000 --rm htagdemo
 
 ## test
 
