@@ -11,6 +11,11 @@ from app import App
 if __name__=="__main__":
     app=Runner( App, host="0.0.0.0", port=8000 )
 
+
+    import socket
+    hostname = socket.gethostname()
+    print(">>>Nom de la machine :", hostname)
+
     ################################################################################
     ### as Runner is a Starlette's application, you can use :
     ################################################################################
