@@ -5,34 +5,36 @@ It will be a lot simpler to intanciate it, on demand ;-)
 **IMPORTANT** : Currently, it's just an [empty app](app/app.py) !
 it will come soon ;-)
 
-# Test on your own (from ghcr.io image)
+# Test on your own
 
     docker run -p 8111:8000 ghcr.io/manatlan/htagdemo:latest
 
-And surf to http://localhost:8111
-
-# Test online
-
-**TESTING, IN PROGRESS** : [htagdemo on render](https://htagdemo.onrender.com/)
-(**NOTE FOR ME**: can't work, because htagweb.Runner() should specify "ssl=True" for "WebServerSession cookie", because "onrender" listen on https only !)
-
-
-# Test on your own (from git)
+or 
 
     docker build -t test https://github.com/manatlan/htagdemo.git && docker run -p 8111:8000 --rm test
 
 And surf to http://localhost:8111
 
-# Test (if you got the repo on local):
 
+
+# Test locally (if you got the repo on local):
+
+    git clone https://github.com/manatlan/htagdemo.git 
+    cd htagdemo
     ./test.sh
 
-# or manually :
+It will open the demo in your browser ;-)
 
 ## build and run once
 
+    git clone https://github.com/manatlan/htagdemo.git 
+    cd htagdemo
     docker build -t htagdemo . && docker run -p 8000:8000 --rm htagdemo
 
-## test
+And surf to http://localhost:8000
 
-Surf to http://localhost:8000
+# Test online
+
+**WORKING IN PROGRESS** : [htagdemo on render](https://htagdemo.onrender.com/)
+(**NOTE FOR ME**: can't work, because htagweb.Runner() should specify "ssl=True" for "WebServerSession cookie", because "onrender" listen on https only !)
+
