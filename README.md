@@ -16,8 +16,7 @@ or
 And surf to http://localhost:8111
 
 
-
-# Test locally (if you got the repo on local):
+# Test locally (on your host):
 
     git clone https://github.com/manatlan/htagdemo.git 
     cd htagdemo
