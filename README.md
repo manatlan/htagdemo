@@ -34,6 +34,6 @@ And surf to http://localhost:8000
 
 # Test online
 
-**WORKING IN PROGRESS** : [htagdemo on render](https://htagdemo.onrender.com/)
-(**NOTE FOR ME**: can't work, because htagweb.Runner() should specify "ssl=True" for "WebServerSession cookie", because "onrender" listen on https only !)
+[htagdemo on render](https://htagdemo.onrender.com/)
+
 
