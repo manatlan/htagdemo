@@ -5,7 +5,13 @@ It will be a lot simpler to intanciate it, on demand ;-)
 **IMPORTANT** : Currently, it's just an [empty app](app/app.py) !
 it will come soon ;-)
 
-# Test on your own 
+# Test on your own (from ghcr image)
+
+    docker run -p 8111:8000 ghcr.io/manatlan/htagdemo:latest
+
+And surf to http://localhost:8111
+
+# Test on your own (from git)
 
     docker build -t test https://github.com/manatlan/htagdemo.git && docker run -p 8111:8000 --rm test
 
