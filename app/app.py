@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 from htag import Tag
 
 class App(Tag.body):
@@ -8,5 +7,6 @@ class App(Tag.body):
 
 
 if __name__=="__main__":
+    # just in case, you'll want to run it with the simple htag'Runner ....
     from htag import Runner
     Runner(App).run()
