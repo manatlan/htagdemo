@@ -9,12 +9,15 @@ from htagweb import Runner
 from app import App
 
 if __name__=="__main__":
-    app=Runner( App, host="0.0.0.0", port=8000 )
-
-
     import socket
     hostname = socket.gethostname()
-    print(">>>Nom de la machine :", hostname)
+    print("HOSTNAME:",hostname)
+    isOnRender = "-hibernate-" in hostname
+
+    app=Runner( App, host="0.0.0.0", port=8000, ssl=isOnRender )
+
+
+    
 
     ################################################################################
     ### as Runner is a Starlette's application, you can use :
