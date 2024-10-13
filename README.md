@@ -20,7 +20,7 @@ And surf to http://localhost:8111
 
     git clone https://github.com/manatlan/htagdemo.git 
     cd htagdemo
-    ./test.sh
+    ./runLocal.sh
 
 It will open the demo in your browser ;-)
 

@@ -8,8 +8,9 @@ from htagweb import Runner
 
 from app import App
 
+app=Runner( App, port=8000 )
+
 if __name__=="__main__":
-    app=Runner( App, host="0.0.0.0", port=8000 )
 
     ################################################################################
     ### as Runner is a Starlette's application, you can use :

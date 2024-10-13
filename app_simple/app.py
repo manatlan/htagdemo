@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 from htag import Tag
-import htagweb,htag
+import htagweb,htag,sys
 
 class App(Tag.body):
     statics="""
@@ -12,7 +12,7 @@ class App(Tag.body):
         self.placeholder = Tag.div()
 
         self <= Tag.p(f"hello world")
-        self <= Tag.center(f"htag={htag.__version__} & htagweb={htagweb.__version__}")
+        self <= Tag.center(f"python={sys.version.split(" ")[0]} / htag={htag.__version__} / htagweb={htagweb.__version__}")
         self <= Tag.button("say hi", _onclick = self.say )
         self <= self.placeholder
 
