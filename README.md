@@ -36,4 +36,6 @@ And surf to http://localhost:8000
 
 [htagdemo on render](https://htagdemo.onrender.com/)
 
+**note** : The docker is hosted on **render.com** (in a free account) : so, it may take 50sec to start on-demand, be patient ;-)
+
 
