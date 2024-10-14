@@ -1,2 +1,2 @@
 htag >= 0.111.0
-htagweb >= 0.42.0
+htagweb >= 0.42.1
