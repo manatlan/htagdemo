@@ -4,7 +4,16 @@ It will be a lot simpler to intanciate it, on demand ;-)
 
 **IMPORTANT** : Currently, I'm working on this (the demo is not finnished, and bug a little)
 
+# Test online
+
+[htagdemo on render](https://htagdemo.onrender.com/)
+
+**note** : The docker is hosted on **render.com** (in a free account) : so, it may take 50sec to start on-demand, be patient ;-)
+
+
 # Test on your own
+
+You'll need docker command on your host, just run :
 
     docker run -p 8111:8000 ghcr.io/manatlan/htagdemo:latest
 
@@ -23,18 +32,14 @@ And surf to http://localhost:8111
 
 It will open the demo in your browser ;-)
 
-## build and run once
+## Test python
 
     git clone https://github.com/manatlan/htagdemo.git 
     cd htagdemo
-    docker build -t htagdemo . && docker run -p 8000:8000 --rm htagdemo
+    ./createPythonVenv.sh
+    python app_demo/server.py
 
 And surf to http://localhost:8000
 
-# Test online
-
-[htagdemo on render](https://htagdemo.onrender.com/)
-
-**note** : The docker is hosted on **render.com** (in a free account) : so, it may take 50sec to start on-demand, be patient ;-)
 
 
