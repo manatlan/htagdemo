@@ -2,8 +2,7 @@ This is "home" for the future "htag demo". It will be a docker app (because my f
 
 It will be a lot simpler to intanciate it, on demand ;-)
 
-**IMPORTANT** : Currently, it's just an [empty app](app/app.py) !
-it will come soon ;-)
+**IMPORTANT** : Currently, I'm working on this (the demo is not finnished, and bug a little)
 
 # Test on your own
 
