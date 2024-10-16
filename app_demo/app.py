@@ -273,7 +273,7 @@ class DEMO(ui.App):
             
 
     def page(self):
-        self.otitle.clear(f" HTag demo !!! ")
+        self.otitle.clear(f" HTag Demo")
     
         with Tag.div(_style="padding:20px;height:100%;overflow-y:auto") as page:
             page <= Tag.img(_src="https://manatlan.github.io/htag/htag.png",_style="float:right;width:33%")
