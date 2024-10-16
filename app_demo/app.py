@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 from htag import Tag,expose
 import html,os,re,time
 from htagui import shoelace as ui
@@ -11,7 +10,7 @@ import htagweb
 ######
 
 
-FOLDER="./DEMOS"
+FOLDER=os.path.join(os.path.dirname(__file__),"DEMOS")
 LINKS = """
 [1]: https://github.com/manatlan/htag
 [2]: https://github.com/manatlan/htagapk
@@ -81,7 +80,9 @@ class Example:
         return ll
         
     def __init__(self,path:str): # path is full path to py file
-        self.url = path[1:-3]   # remove "apps"
+        url=path[:-3] # remove ".py"
+        url="DEMOS"+url[len(FOLDER):]
+        self.url = url
         folder,file=path.split("/")[-2:]
         self.catg = folder[3:]
         self.num = self.catg+file[:-3].split("_",1)[0]
@@ -272,7 +273,7 @@ class DEMO(ui.App):
             
 
     def page(self):
-        self.otitle.clear(f" HTag demo")
+        self.otitle.clear(f" HTag demo ")
     
         with Tag.div(_style="padding:20px;height:100%;overflow-y:auto") as page:
             page <= Tag.img(_src="https://manatlan.github.io/htag/htag.png",_style="float:right;width:33%")

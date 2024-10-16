@@ -9,7 +9,7 @@ Here is an example using "htbulma" (a set of components, I use/develop on an oth
 """
 from htag import Tag
 import htbulma as b
-import asyncio,html
+import asyncio,html,os
 
 
 class App(Tag.body):
@@ -40,7 +40,7 @@ class App(Tag.body):
         fields.addField("range",      b.Range(42,_min=0,_max=100, onchange=self.showvalue) )
 
         filer = b.HSplit( 
-            b.FileSelect(".", self.load, pattern="*.py"),
+            b.FileSelect(os.path.dirname(__file__), self.load, pattern="*.py"),
             self.code ,
             sizes=[30,70],
           )
