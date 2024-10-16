@@ -1,6 +1,11 @@
 name: Docker Image CI for GHCR
 
-on: push
+on: 
+  push:
+  workflow_run:
+    workflows: ["Update the demo"]
+    types:
+      - completed
 
 jobs:
   build_and_publish:
