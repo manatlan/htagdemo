@@ -1,0 +1,39 @@
+name: Update the demo
+
+on:
+  workflow_dispatch:
+#  schedule:
+    # every day at 3:00 AM
+    # - cron:  '0 3 * * *'
+# push:
+#   branches:
+#     - master
+      
+jobs:
+  
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: "install golang"
+        run: |
+          sudo apt-get -y install wget
+
+      - name: "update repo"
+        run: |
+          cd app_demo
+          rm -rf DEMOS app.py
+          wget https://www.mlan.fr/api/DEMO_download
+          unzip -o DEMO_download
+          mv DEMO.py app.py
+          rm DEMO_download        
+          
+      - name: Commit results
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github
+          author_email: mail@example.com
+          message: 'update DEMO'
+          add: 'app_demo/*'
