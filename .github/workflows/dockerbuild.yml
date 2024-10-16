@@ -19,3 +19,9 @@ jobs:
           docker login --username manatlan --password ${{secrets.GITHUB_TOKEN}} ghcr.io
           docker build . --tag ghcr.io/manatlan/htagdemo:latest
           docker push ghcr.io/manatlan/htagdemo:latest
+
+      - name: Call secure URL (render.com redeploy)
+        env:
+          MY_SECURE_URL: ${{ secrets.SECRET_URL }}
+        run: |
+          curl -X GET "$MY_SECURE_URL"
